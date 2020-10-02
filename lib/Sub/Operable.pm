@@ -6,7 +6,7 @@ use overload ();
 package Sub::Operable;
 
 our $AUTHORITY = 'cpan:TOBYINK';
-our $VERSION   = '0.001';
+our $VERSION   = '0.002';
 
 use constant PREFIX_OPS => map split(/ /, $overload::ops{$_}), qw(
 	unary
