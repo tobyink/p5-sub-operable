@@ -146,6 +146,11 @@ Sub::Operable - apply Perl built-in operators to coderefs
   #
   my $f = subop { $_ ** 2 };
   
+  # f(4) = 4²
+  #      = 16
+  #
+  say $f->(4);   # ==> 16
+  
   # g(x) = 2x
   #
   my $g = subop { 2 ** $_ };
@@ -218,6 +223,37 @@ You can get lists of supported operators:
   
   my @prefix = Sub::Operable::PREFIX_OPS;
   my @infix  = Sub::Operable::INFIX_OPS;
+
+=head2 Symbol Table Frickery
+
+You don't have to just deal with coderefs. You can put these functions
+into the symbol table.
+
+  use Sub::Operable 'subop';
+  
+  # f(x) = x²
+  #
+  *f = subop { $_ ** 2 };
+  
+  # f(4) = 4²
+  #      = 16
+  #
+  say f(4);   # ==> 16
+  
+  # g(x) = 2x
+  #
+  *g = subop { 2 ** $_ };
+  
+  # h = f + g + 3
+  #
+  *h = \&f + \&g + 3;
+  
+  # h(10) = f(10) + g(10) + 3
+  #       = 10²   + 2(10) + 3
+  #       = 100   + 20    + 3
+  #       = 123
+  #
+  say h(10);   # ==> 123
 
 =head1 BUGS
 

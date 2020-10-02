@@ -20,7 +20,7 @@ the same terms as the Perl 5 programming language system itself.
 
 =cut
 
-use 5.008009;
+use 5.008008;
 use strict;
 use warnings;
 use Test::More;
