@@ -41,7 +41,7 @@ use constant INFIX_OPS => map split(/ /, $overload::ops{$_}), qw(
 
 use isa __PACKAGE__;
 
-use Exporter::Shiny qw( isa_Sub_Operable subop );	
+use Exporter::Shiny qw( isa_Sub_Operable subop );
 
 sub new {
 	my ( $class, $coderef ) = ( shift, @_ );
