@@ -7,6 +7,6 @@
 	:develop-recommendation [ :on "Dist::Inkt 0.001"^^:CpanId ];
 	:runtime-requirement    [ :on "isa"^^:CpanId ];
 	:runtime-requirement    [ :on "Exporter::Tiny"^^:CpanId ];
-	:runtime-requirement    [ :on "Perl 5.008008"^^:CpanId ];
+	:runtime-requirement    [ :on "Perl 5.008009"^^:CpanId ];
 	.
 
