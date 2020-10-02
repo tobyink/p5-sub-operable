@@ -153,7 +153,7 @@ Sub::Operable - apply Perl built-in operators to coderefs
   
   # g(x) = 2x
   #
-  my $g = subop { 2 ** $_ };
+  my $g = subop { 2 * $_ };
   
   # h = f + g + 3
   #
@@ -242,7 +242,7 @@ into the symbol table.
   
   # g(x) = 2x
   #
-  *g = subop { 2 ** $_ };
+  *g = subop { 2 * $_ };
   
   # h = f + g + 3
   #
